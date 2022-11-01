@@ -1,0 +1,172 @@
+:root{
+--Soft-blue: hsl(215, 51%, 70%);
+--Cyan: hsl(178, 100%, 50%);
+--dark-blue-main-BG: hsl(217, 54%, 11%);
+--Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+--Very-dark-blue-line: hsl(215, 32%, 27%);
+--White: hsl(0, 0%, 100%);
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+
+}
+
+body{
+    height: 100vh;
+    max-width: 40em;
+    background-color: var(--dark-blue-main-BG);
+    font-family:  'Outfit', sans-serif;
+    display: grid;
+    place-content: center;
+    color: var(--Soft-blue);
+}
+
+article{
+    background-color: var(--Very-dark-blue-card-BG);
+    max-width: 350px;
+    padding: 25px 25px;
+    border-radius:12px;
+    box-shadow:1px 20px 20px 8px rgba(22, 22, 22, 0.86);
+}
+
+.image{
+    position: relative;
+  
+}
+
+.image div{
+    position:absolute;
+    background-color:  hsla(178, 100%, 50%, 0.356);
+    width: 100%;
+    height: calc(100% - 4px);
+    border-radius: 8px; 
+    top: 0;
+    opacity: 0;
+    transition:ease-out 0.2s;
+}
+
+.image div img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50% ,-50%);
+}
+
+.image div:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.equilibriump-image{
+    width: 100%;
+    border-radius: 8px;
+    
+}
+
+
+h1{
+    margin-top: 15px;
+    color: var(--White);
+    margin-bottom: 15px;
+}
+
+h1:hover{
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+.paragraph{
+
+    font-size: 1.125rem;
+    margin-bottom: 15px;
+    line-height: 28px;
+}
+
+.first-row{
+    display:flex;
+    justify-content: space-between;
+}
+
+.et , .time{
+    display: flex;
+    flex-wrap:wrap;
+    margin-bottom: 17px;
+    align-items: center;
+}
+
+.et-img{
+ width: 16px;
+ height: 24px;
+}
+
+.et-text{
+    color: var(--Cyan);
+    padding-left: 3px;
+    font-weight: bold;  
+}
+
+.clock{
+    width: 22px;
+    height: 22px;
+
+}
+
+.time-text{
+    padding-left: 8px;
+}
+
+hr{
+    border:1px solid hsla(215, 52%, 70%, 0.135);
+    margin-bottom: 17px;
+}
+
+.secand-row{
+    display: flex;
+    align-items: center;
+}
+
+.picture{
+    height:40px;
+    border: 2px solid var(--White);
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.link{
+    color: var(--White);
+    text-decoration: none;
+    padding-left: 6px;
+}
+.link:hover{
+    color: var(--Cyan);
+}
+
+
+
+
+
+
+.attribution {
+    margin-top: 8px;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+}
+
+.attribution a:hover{
+    text-decoration:underline;
+}
+
+
+@media(max-width:90em){
+    body{
+     max-width: 90em;
+    }   
+}
